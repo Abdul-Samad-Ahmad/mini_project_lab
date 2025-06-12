@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Unique gradient background */
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(135deg, #3498db, #9b59b6); /* Soft gradient */
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+    }
+
+    form {
+      background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+      padding: 40px 60px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+      text-align: center;
+      animation: scaleIn 1s ease;
+    }
+
+    @keyframes scaleIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #2c3e50;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #333;
+      text-align: left;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db; /* Matching button color */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2980b9;
+      transform: scale(1.03);
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .register-link {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+
+  <div class="container">
+    <form action="loginServlet" method="post">
+      <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Admin Logo">
+      <h2>Admin Login</h2>
+
+      <label for="uname">Admin Name:</label>
+      <input type="text" id="uname" name="uname" required>
+
+      <label for="upass">Admin Password:</label>
+      <input type="password" id="upass" name="upass" required>
+
+      <input type="submit" value="Login">
+
+      <div class="register-link">
+        New User? <a href="register.html">Register Here</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
