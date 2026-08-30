@@ -1,1 +1,1 @@
-# Jira SCRUM-6: Offline comments implementation
+NCD-6 -github-incorrect coded
